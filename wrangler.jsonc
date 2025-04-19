@@ -1,7 +1,5 @@
 {
 "name": "murrayscott",
 "compatability date":"2025-04-19",
-"assets": {
-"directory": "./dist"
-}
+"main": "src/index.ts" 
 }
