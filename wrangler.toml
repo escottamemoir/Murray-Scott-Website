@@ -1,2 +1,5 @@
 name = "murrayscott"
 compatibility_date = "2025-04-19"
+
+[build]
+command = "npm run build" # If you have a build step
