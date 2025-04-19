@@ -14,10 +14,17 @@ body {
 }
 
 h1 {
-    font-family: "condor-condensed", sans-serif;
+    font-family: sans-serif;
     font-weight: 700;
     font-size: 5rem;
-    font-style: italic;
+    line-height:100px;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    font-style: normal;
     line-height:100px;
 }
 
@@ -59,26 +66,35 @@ h1 {
 
 /* Header */
 header {
-    position: sticky;
+    position:absolute;
     top: 0;
-    background: #fff;
-    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1); /* No shadow as per your adjustment */
-    padding: 5px ; /* Adjusted per your request */
+    width:100%;
+    padding: 5px ; 
     z-index: 1000;
+    background-color:transparent;
+}
+
+header.fixed {
+    position: fixed; 
+    background: white; 
+    transition: background-color 1s ease; 
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
-    max-height: 50px; /* Applied per your adjustment */
+    max-height: 50px;
     align-items: center;
+}
+
+header.fixed .hamburger {
+    color: #000; 
 }
 
 /* Top Bar */
 .top-bar {
     font-size: 12px;
     padding-bottom:10px;
-
 }
 
 .top-bar-center {
@@ -88,20 +104,25 @@ header .container {
     font-weight: bold;
     flex-direction:row;
     justify-content: space-between;
-    background: white;
-    padding:2%;
+}
+
+header .scrolled {
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: 1s ease;
+    position: fixed;
 }
 
 .logo {
-    display:flex;
+    display:sticky;
     justify-content: left;
     align-items: center;
     margin:0;
-    max-width:20%;
+    max-width:10%;
 }
 
 .logo img {
-    height: 50px; /* Applied per your adjustment */
+    height: 40px;
     margin-top:10px;
 }
 
@@ -125,7 +146,7 @@ header .container {
 
   .video-section__overlay button--primary {
     display: flex;
-    margin-top: 20px; /* Add margin to push it below the h1 */
+    margin-top: 20px;
   }
 
 .desktop-nav ul {
@@ -133,57 +154,63 @@ header .container {
     float: right;
     display:flex;
     margin:0;
+    
 }
 
 .desktop-nav ul li {
-    margin-left: 30px; /* Applied per your adjustment */
-    transition: 1s ease;
-    padding:10px;
+    width: 50%;
+    padding: 10px;
 }
 
 .desktop-nav ul li a {
     text-decoration: none;
-    color: #333;
-    font-weight: 50; 
-    font-size:14px;
-}
-
-.desktop-nav ul li:hover{
-    text-decoration: none;
-    background-color: yellow;
     color: white;
-    font-weight: 50; 
+    font-weight: normal; 
     font-size:14px;
     padding:10px;
+}
+
+header.fixed .desktop-nav ul li a {
+    color: black;
+    font-weight:50;
+
+}
+.desktop-nav ul li a.dark {
+    color: #333;
+}
+
+.desktop-nav ul li a:hover{
+    text-decoration: none;
+    background-color: yellow;
     text-align:center;
 }
 
 /*Main Section*/
-.article-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two equal columns */
-    gap: 20px;
-    max-width: 1200px;
-    margin: 20px auto;
-    padding: 0 20px;
-}
-
 .full-width-section {
     width: 100%;
-    height: 500px;
+    height: 600px;
+    max-height:900px;
     object-fit: cover;
     object-position: center;
-    display: block;
+    margin-bottom:10px;
 }
 
 .full-width-image-container {
     justify-content: center;
     height:500px;
     align-items: center;
-    display: block;
+    display:absolute;
 }
 
 /* Articles (Left Column) */
+.article-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
 .articles {
     display: flex;
     flex-direction: column;
@@ -199,16 +226,19 @@ header .container {
 .live-tag {
     display: flex;
     align-items: center;
-    gap: 8px;
+    margin-bottom:25px;
 }
 
 .live {
-    background-color: blue; /* Red background for LIVE tag */
+    background-color: rgb(19, 166, 192); 
     color: white;
     font-size: 12px;
     font-weight: bold;
-    padding: 2px 6px;
-    border-radius: 3px;
+    padding: 4px ;
+    border-radius: 5px;
+    text-align: center;
+    align-items: center;
+    width: 110px;
 }
 
 .timestamp {
@@ -248,7 +278,6 @@ header .container {
 .image-container {
     display: flex;
     flex-direction: column;
-    gap: 8px;
 }
 
 .image-container img {
@@ -333,56 +362,91 @@ header .container {
     position: relative; /* Add this to position the text relative to the image */
     justify-content: center; /* Horizontal centering */
     align-items: center;
+    background-color: #15153f; /* Optional: Add a background color for better visibility */
 }
+
 .full-width-image-text {
     position: absolute; /* Position the text absolutely within the relative container */
-    bottom: 10%; /* Center vertically */
-    left: 20px; /* Center horizontally */
-    color: white; /* Ensure the text is visible */
+    bottom: 20px; 
+    left: 20px; 
+    color: white; 
     text-align: left;
-    background:transparent; /* Optional: Add a semi-transparent background for better readability */
-    padding: 0px; /* Optional: Add some padding */
-    border-radius: 10px; /* Optional: Add rounded corners */
-    font-size:40px;
+    background:transparent; 
+    Height:70%;
+    border-width:5px;
+    width:90%;
+    border-color:white;
+    border-style:solid;
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: flex-end;
+}
+
+.full-width-image-text h1 {
+    font-size:4rem;
+    padding:10px;
+    line-height:4rem;
 }
 
 .text-over-image-container{
-    position: relative; /* Position the container relative to its normal position */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 70vh; /* Full height of the parent container */
+    position: relative; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    height: 70vh;
     background-color: #15153f;
+    width:100%;
 }
 
 /*Text over image*/
-.text-over-image-text-light {
-    position: absolute; /* Position the text absolutely within the relative container */
-    top: 10%; /* Center vertically */
-    color: white; /* Ensure the text is visible */
-    background:transparent; /* Optional: Add a semi-transparent background for better readability */
-    padding: 0px; /* Optional: Add some padding */
-    border-radius: 10px; /* Optional: Add rounded corners */
-    font-size:1.5rem;
-    text-align:center;
+
+.text-over-image {
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    position: relative; /* Add this to position the text relative to the image */
+    justify-content: center; /* Horizontal centering */
+    align-items: center;
+    opacity: 80%;
+    background-color: #15153f; /* Optional: Add a background color for better visibility */
+}
+
+.text-over-image-text {
+    position: absolute;
+    color: white;
+    padding: 10%;
+    width:100%;
+    text-align:left;
+    translate:var(50%);
+}
+
+.text-over-image-text h1 {
+    font-size:3rem;
+    line-height:normal;
+}
+
+.text-over-image-text p {
+    font-size: 1.5rem; 
+    margin: 1rem 0 1.5rem;
+    line-height: normal;
 }
 
 .text-over-image-overlay {
-    position: absolute; /* Position the overlay absolutely within the relative container */
-    bottom: 30px; /* Align to the top */
-    left: 0; /* Align to the left */
+    position: absolute; 
+    bottom: 30px;
+    left: 0; 
     padding:20px;
     width:100%;
-    height: 50%; /* Full height of the parent container */
-    display: flex; /* Use flexbox for centering */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    height: 50%; 
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
 
 .text-over-image-text-light h2 {
-    font-size: 2rem; /* Adjusted font size for better visibility */
-    margin-bottom: 10px; /* Added margin for spacing */
-    line-height: 2.5rem;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    line-height: 2rem;
 }
 
 .text-over-image-text-light p {
@@ -415,15 +479,3 @@ header .container {
     color: #666;
     margin-bottom: 10px;
 }
-
-/* Hero Section */
-.hero {
-    background: #f4f4f4;
-    padding: 40px;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size:10px;
-}
-
