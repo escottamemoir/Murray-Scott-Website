@@ -10,10 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (scrollPosition > heroHeight) {
             header.classList.add('fixed');
-            logoImg.src = '../Assets/Murray Scott.png'; // Dark logo when fixed
+            logoImg.src = 'MS Logo Dark.png'; // Dark logo when fixed
         } else {
             header.classList.remove('fixed');
-            logoImg.src = '../Assets/MS Logo Light.png'; // Light logo when transparent
+            logoImg.src = 'MS Logo Light.png'; // Light logo when transparent
         }
     });
 });
