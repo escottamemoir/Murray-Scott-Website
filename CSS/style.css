@@ -355,7 +355,8 @@ section.full-width-section {
 
 .full-width-image-text h1 {
     font-size: 4rem;
-    padding: 10px;
+    padding-bottom: 40px;
+    padding-left:20px;
     line-height: 4rem;
 }
 
