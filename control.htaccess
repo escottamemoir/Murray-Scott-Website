@@ -1,0 +1,6 @@
+<IfModule mod_headers.c>
+    # Cache static assets for 1 month
+    <FilesMatch "\.(jpg|jpeg|png|webp|gif|svg|css|js|ico)$">
+        Header set Cache-Control "max-age=2592000, public"
+    </FilesMatch>
+</IfModule>
