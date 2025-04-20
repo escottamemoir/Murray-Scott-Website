@@ -1,0 +1,8 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+
+git init
+git add nav-bar.js
+git commit -m "Initial commit"
+git remote add origin https://github.com/escottamemoir/murrayscott.git
+git push -u origin main

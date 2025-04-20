@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream:style-mobile.css
 /* Mobile Menu */
 .hamburger {
     display: none;
@@ -89,4 +90,97 @@
         padding: 20px;
     }
 
+=======
+/* Mobile Menu */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    padding: 20px;
+    transition: left 0.3s ease;
+    right:-100%;
+    background-color: white;
+    z-index: 2000;
+}
+
+.mobile-menu.active {
+    right: 0;
+    transition:0.3s ease;
+}
+
+.mobile-menu ul {
+    list-style: none;
+    margin-top: 60px;
+}
+
+.mobile-menu ul li {
+    margin: 20px 0;
+}
+
+.mobile-menu ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition:0.3s ease;
+}
+
+@media screen and (max-width: 450px) {
+    .logo img {
+        height:40px;
+        padding-left:20%;
+    }
+
+    .top-bar-center {
+        margin:0;
+        max-width: 100%;
+        padding:0 0 0 3%;
+    }
+
+    .desktop-nav {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+    .hamburger {
+        display: flex;
+        font-size: 24px;
+        color:white;
+        border: none;
+        cursor: pointer;
+        text-align: center;
+    }
+    .container {
+        max-width: 100%;
+        padding: 20px; 
+    }
+    .article-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-width: 90%;
+        padding: 20px;
+    }
+
+>>>>>>> Stashed changes:CSS/style-mobile.css
 }
