@@ -1,13 +1,13 @@
 // Select elements
-const snapContainer = document.querySelector(".container");
+const snapContainer = document.querySelector(".snap-container");
 const navLinks = document.querySelectorAll(".desktop-nav a, .mobile-menu a");
 const header = document.querySelector("header");
 const logoImg = document.querySelector(".logo img");
-const heroSection = document.querySelector("section .full-width-section"); // Hero section
+const heroSection = document.querySelector(".full-width-section");
 
 // Function to determine the current section in view
 function getCurrentSection() {
-    const sections = document.querySelectorAll("section .full-width-section");
+    const sections = document.querySelectorAll(".snap-section");
     let currentSection = null;
 
     sections.forEach((section) => {
@@ -29,6 +29,7 @@ function handleScroll() {
     const currentSection = getCurrentSection();
     if (currentSection) {
         const currentSectionId = currentSection.id; // e.g., "section2"
+        console.log("Current Section ID:", currentSectionId); // Debug
 
         // Remove active class from all links
         navLinks.forEach((link) => {
@@ -45,17 +46,18 @@ function handleScroll() {
     }
 
     // Toggle fixed header and logo image
-    const heroHeight = heroSection.offsetHeight; // Height of hero section
-    const scrollPosition = snapContainer.scrollTop; // Current scroll position of snap-container
+    const heroHeight = heroSection.offsetHeight;
+    const scrollPosition = snapContainer.scrollTop;
+    console.log("Scroll Position:", scrollPosition, "Hero Height:", heroHeight); // Debug
 
     if (scrollPosition > heroHeight) {
         header.classList.add("fixed");
-        logoImg.src = "../Assets/Murray Scott.png"; // Dark logo when fixed
-        navLinks.forEach(link => link.classList.add("dark")); // Add dark class to all links
+        logoImg.src = "/Assets/Murray Scott.png"; // Ensure this path is correct
+        navLinks.forEach(link => link.classList.add("dark"));
     } else {
         header.classList.remove("fixed");
-        logoImg.src = "../Assets/MS Logo Light.png"; // Light logo when transparent
-        navLinks.forEach(link => link.classList.remove("dark")); // Remove dark class from all links
+        logoImg.src = "/Assets/MS Logo Light.png";
+        navLinks.forEach(link => link.classList.remove("dark"));
     }
 }
 
@@ -64,7 +66,7 @@ snapContainer.addEventListener("scroll", () => {
     // Debounce the scroll event for performance
     let isScrolling;
     clearTimeout(isScrolling);
-    isScrolling = setTimeout(handleScroll, 150);
+    isScrolling = setTimeout(handleScroll, 100);
 });
 
 // Trigger the scroll behavior once on page load
@@ -74,7 +76,7 @@ handleScroll();
 navLinks.forEach((link) => {
     link.addEventListener("click", (e) => {
         e.preventDefault();
-        const sectionId = link.getAttribute("href").substring(1); // Remove the #
+        const sectionId = link.getAttribute("href").substring(1);
         const targetSection = document.getElementById(sectionId);
         if (targetSection) {
             targetSection.scrollIntoView({ behavior: "smooth" });
