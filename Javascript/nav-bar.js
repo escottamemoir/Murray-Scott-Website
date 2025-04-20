@@ -1,7 +1,7 @@
 
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('header');
-    const heroSection = document.querySelector('.full-width-image');
+    const heroSection = document.querySelector('.container');
     const logoImg = document.querySelector('.logo img');
     const NavBar = document.querySelector('.desktop-nav ul li a');
 
@@ -20,4 +20,10 @@ document.addEventListener('DOMContentLoaded', () => {
             navLinks.forEach(link => link.classList.remove('dark')); // Remove dark class from all links
         }
     });
+
+        // Attach scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Trigger the scroll behavior once on page load
+        handleScroll();
 });

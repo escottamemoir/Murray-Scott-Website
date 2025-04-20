@@ -78,10 +78,6 @@
         cursor: pointer;
         text-align: center;
     }
-    .container {
-        max-width: 100%;
-        padding: 20px; 
-    }
     .article-section {
         display: grid;
         grid-template-columns: 1fr;
@@ -169,10 +165,7 @@
         cursor: pointer;
         text-align: center;
     }
-    .container {
-        max-width: 100%;
-        padding: 20px; 
-    }
+
     .article-section {
         display: grid;
         grid-template-columns: 1fr;

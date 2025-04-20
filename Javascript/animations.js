@@ -1,6 +1,6 @@
 // Select all sections
 const sections = document.querySelectorAll("section");
-const container = document.querySelector(".text-over-image-container");
+const container = document.querySelector(".container");
 
 // Function to smoothly scroll to a section
 function scrollToSection(section) {
