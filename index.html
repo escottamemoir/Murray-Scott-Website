@@ -14,7 +14,7 @@
 <body>
         <!-- Header -->
         <header>
-            <div class="container">
+            <div class="logo-nav-container">
                 <div class="logo">
                     <img src="../Assets/MS Logo Light.png" alt="Murray Scott Logo">
                 </div>
@@ -38,14 +38,15 @@
                         <li><a href="#entertainment">Entertainment</a></li>
                     </ul>
                 </nav>
-            </div>
+                </div>
         </header>
 
- <script src="../Javascript/mobile-menu.js"></script>
-  <script src="../Javascript/nav-bar.js"></script>
+<script src="../Javascript/mobile-menu.js"></script>
+<script src="../Javascript/nav-bar.js"></script>
+<script src="../Javascript/animations.js"></script>
+
 <!-- Mobile Menu -->
     <div class="mobile-menu">
-
         <button class="close-menu">✕</button>
         <ul>
             <li><a href="#">Home</a></li>
@@ -54,17 +55,19 @@
             <li><a href="#">Contact</a></li>
         </ul>
     </div>
+
 <!--Hero Section-->
-<div class="full-width-section">
-    
+<div class="container">
+<section id="section1" class="full-width-section">
     <div class="full-width-image">
     <img src="../Assets/hero-image.jpg" alt="Hero Banner" class="full-width-image">
         <div class="full-width-image-text"><h1>GROW YOUR BUSINESS</h1>
         </div>
 </div>
-</div>
+</section>
+
 <!-- Full Width Image Section -->
- <section class="text-over-image-container">
+ <section id="section2" class="text-over-image-container">
     <img src="../Assets/Dark-Background.jpeg" class="full-width-image">
     <div class="text-over-image-text">
       <h1>AI-Driven Customer Engagement</h1>
@@ -72,8 +75,9 @@
     <button class="cta-button">Learn More</button>
 </div>
 </section>
+
 <!-- Article Section-->
-<section class="article-section">
+<section id="section3" class="article-section">
 <!-- Left Column: Articles -->
       <div class="articles">
           <!-- First Article -->
@@ -129,7 +133,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -138,4 +141,5 @@
     </footer>
 
 </body>
+</div>
 </html>
