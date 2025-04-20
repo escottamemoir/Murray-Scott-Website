@@ -86,4 +86,11 @@
         max-width: 90%;
         padding: 20px;
     }
+
+    .full-width-image-text h1 {
+    font-size: 3rem;
+    padding-bottom: 100px;
+    padding-left:20px;
+    line-height: 4rem;
+    }
 }
