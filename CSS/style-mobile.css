@@ -1,4 +1,4 @@
-<<<<<<< Updated upstream:style-mobile.css
+
 /* Mobile Menu */
 .hamburger {
     display: none;
@@ -90,7 +90,6 @@
         padding: 20px;
     }
 
-=======
 /* Mobile Menu */
 .hamburger {
     display: none;
@@ -181,6 +180,5 @@
         max-width: 90%;
         padding: 20px;
     }
-
->>>>>>> Stashed changes:CSS/style-mobile.css
+}
 }
