@@ -88,10 +88,15 @@
     }
 
     .full-width-image-text h1 {
-    font-size: 4rem;
+    font-size: 55px;
     line-height: 4rem;
     }
 
+    .full-width-image-text {
+        width: 95%;
+        padding-right:20px;
+        transform:translate(2%);
+    }
     .two-column-row {
         display: flex;
         flex-direction: column;

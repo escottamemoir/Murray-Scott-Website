@@ -377,6 +377,7 @@ section.full-width-section {
     margin:100px;
     flex-direction: column;
 }
+
 .column-text h2 {
     font-size: 3rem;
     font-weight: bold;
@@ -413,19 +414,18 @@ section.full-width-section {
 .full-width-image-text {
     position: absolute;
     bottom: 50px;
-    left: 20px;
     padding-left:20px;
-    padding-top:50px;
+    padding-top:20px;
     text-align: left;
     background: transparent;
     height: 70%;
     border-width: 5px;
-    width: 90%;
+    width: 80%;
     border-style: solid;
     display: flex;
     flex-direction: column;
-    align-items: left;
     border-color:white;
+    transform:translate(10%);
 }
 
 .full-width-image-text h1 {
