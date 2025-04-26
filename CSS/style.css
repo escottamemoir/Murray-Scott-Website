@@ -18,7 +18,6 @@ h1 {
     font-family: sans-serif;
     font-weight: 700;
     font-size: 5rem;
-    line-height: 100px;
 }
 
 h2 {
@@ -28,6 +27,7 @@ h2 {
     font-style: normal;
     color: white;
     line-height: 1;
+    padding-bottom:10px;
 }
 
 section {
@@ -350,7 +350,7 @@ section.full-width-section {
     height: 100vh;
     object-fit: cover;
     position: relative;
-    justify-content: center;
+    justify-content: left;
     align-items: left;
     background-color: #f66f51;
 }
@@ -430,7 +430,7 @@ section.full-width-section {
 
 .full-width-image-text h1 {
     font-size: 6rem;
-    padding-bottom: 20px;
+    line-height:7rem;
     color: white;
 }
 
@@ -502,6 +502,7 @@ section.full-width-section {
     text-align: center;
     max-width: 120px;
     font-size:14px;
+    margin-top:20px;
 }
 
 /* Trending Section */
