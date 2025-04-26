@@ -89,7 +89,6 @@
 
     .full-width-image-text h1 {
     font-size: 4rem;
-    padding-bottom: 20px;
     line-height: 4rem;
     }
 
@@ -101,7 +100,7 @@
     .column-image {
         width: 100%;
         min-height:200px;
-        max-height:400px;
+        max-height:300px;
     }
 
     .column-text {
