@@ -105,11 +105,9 @@
 
     .column-text {
         justify-content: center;
-        align-items: left;
-        width: 90%;
         height: 100%;
-        display: block;
         flex-direction: column;
+        width:90%;
     }
     body {
         max-width:100%;
