@@ -19,7 +19,7 @@ body {
     z-index:1;
     display:flex;
     flex-direction:column;
-    background-image: url('../Assets/MurrayScott_Background.jpg'); /* Replace with your image path */
+    background-color: rgb(141, 87, 91); /* Replace with your image path */
     background-size: cover; /* Scale image to cover the section */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent image repetition */
@@ -393,12 +393,12 @@ section.full-width-section {
 }
 
 .column-image {
-    height: 100vh;
+    height: 100%;
     z-index:2;
     max-width:100%;
     object-fit: cover;
-    object-position: left;
-    margin-bottom: 50px;
+    object-position: center;
+    margin-bottom: 0px;
 }
 
 .column-text {
@@ -530,17 +530,18 @@ section.full-width-section {
     border-radius: 25px;
     border-width: 0px;
     text-align: center;
-    max-width: 120px;
+    width: 120px;
     font-size:14px;
     margin-top:10px;
 }
 
 /* Trending Section */
 .trending-posts {
-    padding-top: 100px;
+    padding-top: 80px;
     background: transparent;
     display: flex;
     align-content: flex-start;
+    flex-direction: row;
     height:100vh;
     padding-bottom: 50px;
 }
@@ -556,9 +557,10 @@ section.full-width-section {
 
 .trending-grid {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 20px;
-}
+    justify-content: space-evenly;
+    }
 
 .trending-card {
     position: relative;
@@ -582,6 +584,7 @@ section.full-width-section {
 
 .card-content {
     padding: 15px;
+    width:100%;
 }
 
 .card-content h3 {
