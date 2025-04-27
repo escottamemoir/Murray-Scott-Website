@@ -398,6 +398,7 @@ section.full-width-section {
     max-width:100%;
     object-fit: cover;
     object-position: left;
+    margin-bottom: 50px;
 }
 
 .column-text {
@@ -539,20 +540,21 @@ section.full-width-section {
     display: flex;
     align-content: flex-start;
     height:100vh;
+    padding-bottom: 50px;
 }
 
 .trending-heading {
     font-size: 24px;
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
 .trending-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -564,7 +566,6 @@ section.full-width-section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     justify-items:space-between;
-    max-height:340px;
 }
 
 .trending-card:hover {
@@ -573,7 +574,7 @@ section.full-width-section {
 
 .thumbnail {
     width: 100%;
-    height: 50%;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -583,7 +584,7 @@ section.full-width-section {
 
 .card-content h3 {
     font-size: 18px;
-    margin-bottom: 8px;
+    margin-bottom: 2px;
     line-height: 1.3;
 }
 
