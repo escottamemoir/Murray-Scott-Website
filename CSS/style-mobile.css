@@ -100,7 +100,7 @@
     .two-column-row {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
+        justify-content: left;
     }
     .column-image {
         width: 100%;
@@ -109,7 +109,8 @@
 
     .column-text {
         flex-direction: column;
-        padding:100px 20px 60px;
+        padding:100px 30px 60px 25px;
+        width:100%;
     }
     body {
         max-width:100%;
