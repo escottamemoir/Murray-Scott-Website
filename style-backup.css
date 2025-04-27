@@ -14,17 +14,6 @@ body {
     overflow-y:auto;
 }
 
-.background-image-container  {
-    height:200vh;
-    z-index:1;
-    display:flex;
-    flex-direction:column;
-    background-image: url('../Assets/MurrayScott_Background.jpg'); /* Replace with your image path */
-    background-size: cover; /* Scale image to cover the section */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent image repetition */
-}
-
 h1 {
     font-family: sans-serif;
     font-weight: 700;
@@ -45,6 +34,7 @@ section {
     width: 100%;
     box-sizing: border-box;
 }
+
 /* Snap container for scroll snapping */
 .snap-container {
     height: 100vh; 
@@ -56,13 +46,6 @@ section {
 .snap-section {
     min-height: 100vh; 
     scroll-snap-align: start; 
-}
-
-.snap-container {
-    background-image: url('MurrayScott_Gradient.jpg'); /* Replace with your image path */
-    background-size: cover; /* Scale image to cover the section */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent image repetition */
 }
 
 .container {
@@ -369,44 +352,29 @@ section.full-width-section {
     position: relative;
     justify-content: left;
     align-items: left;
+    background-color: #f66f51;
 }
 
 /* 2 Column Row */
-.two-column-row-container {
-    position: relative;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
-}
-
 .two-column-row {
-    align-items: center;
-    z-index:1;
-    display:flex;
-    color:transparent;
-    flex:wrap;
-    position: absolute;
+    display: flex;
     justify-content: space-between;
-    width: 100%;
-    height:100vh;
-}
-
-.column-image {
+    width:100%;
     height: 100vh;
-    z-index:2;
-    max-width:100%;
-    object-fit: cover;
-    object-position: left;
+    align-items: center;
+    margin: 0px 0;
+    grid-template-columns: 1fr 1fr;
+    background-color: #f66f51;
 }
 
 .column-text {
+    display: flex;
     justify-content: center;
-    align-content:center;
     align-items: left;
-    padding:100px;
-    width:80%;
-    z-index:3;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    margin:100px;
     flex-direction: column;
 }
 
@@ -420,10 +388,15 @@ section.full-width-section {
     font-size: 1rem;
     color: white;
     margin-bottom: 20px;
-    font-weight:bold;
 }
 
-
+.column-image {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
 
 
 /* Overlay Image */
@@ -535,7 +508,7 @@ section.full-width-section {
 /* Trending Section */
 .trending-posts {
     padding-top: 100px;
-    background: transparent;
+    background: #fff;
     min-height: 60vh;
     display: flex;
     align-items: center;

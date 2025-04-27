@@ -101,18 +101,19 @@
         display: flex;
         flex-direction: column;
         grid-template-columns: 1fr;
+        justify-content: flex-start;
     }
     .column-image {
         width: 100%;
         min-height:200px;
-        max-height:350px;
+        max-height:50vh;
     }
 
     .column-text {
-        justify-content: center;
-        height: 100%;
         flex-direction: column;
-        width:90%;
+        width:100%;
+        margin-top:100px;
+        padding:60px 40px;
     }
     body {
         max-width:100%;
