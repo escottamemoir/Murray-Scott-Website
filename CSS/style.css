@@ -419,7 +419,7 @@ section.full-width-section {
 .column-text p {
     font-size: 1rem;
     color: white;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-weight:bold;
 }
 
@@ -529,7 +529,7 @@ section.full-width-section {
     text-align: center;
     max-width: 120px;
     font-size:14px;
-    margin-top:20px;
+    margin-top:10px;
 }
 
 /* Trending Section */
@@ -538,6 +538,7 @@ section.full-width-section {
     background: transparent;
     display: flex;
     align-content: flex-start;
+    height:100vh;
 }
 
 .trending-heading {
@@ -563,6 +564,7 @@ section.full-width-section {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s;
     justify-items:space-between;
+    max-height:340px;
 }
 
 .trending-card:hover {
@@ -571,7 +573,7 @@ section.full-width-section {
 
 .thumbnail {
     width: 100%;
-    height: 210px;
+    height: 50%;
     object-fit: cover;
 }
 
