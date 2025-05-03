@@ -50,7 +50,7 @@
     transition:0.3s ease;
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 565px) {
     .logo img {
         height:40px;
         padding-left:20%;
@@ -72,7 +72,7 @@
     .hamburger {
         display: flex;
         font-size: 24px;
-        color:white;
+        color: #151515;;
         border: none;
         cursor: pointer;
         text-align: center;
@@ -96,21 +96,6 @@
         width: 95%;
         padding-right:20px;
         transform:translate(2%);
-    }
-    .two-column-row {
-        display: flex;
-        flex-direction: column;
-        justify-content: left;
-    }
-    .column-image {
-        width: 100%;
-        height:100%;
-    }
-
-    .column-text {
-        flex-direction: column;
-        padding:100px 30px 60px 25px;
-        width:100%;
     }
     body {
         max-width:100%;
